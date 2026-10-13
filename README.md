@@ -7,18 +7,24 @@ This repository implements a complete closed-loop control architecture for a Rem
 
 ### System Dynamics
 The ROV is modeled as a 6-dimensional linear time-invariant (LTI) system:
+
 $$\dot{X} = A X + B U$$
+
 $$Y = C X$$
 Where the measurement matrix $C$ only captures the spatial positions and yaw angle $(x, y, \psi)$, requiring an observer to estimate the unmeasured linear and angular velocities.
 
 ### Closed-Loop Control (Pole Placement)
 The state feedback gain matrix $K_c \in \mathbb{R}^{3 \times 6}$ is designed to force the closed-loop system matrix $(A - B K_c)$ to be asymptotically stable. The gains are computed by matching the closed-loop characteristic equation to a desired second-order response:
+
 $$s^2 + 2\xi\omega_n s + \omega_n^2 = 0$$
+
 For the controller, the natural frequency is set to $\omega_n = 1$ rad/s with critical damping $\xi = 1$.
 
 ### Luenberger Observer
 To reconstruct the full state vector from partial measurements, a Luenberger observer is implemented:
+
 $$\dot{\hat{X}} = A \hat{X} + B U + K_o (Y - C \hat{X})$$
+
 The observer gain matrix $K_o \in \mathbb{R}^{6 \times 3}$ is designed using the same pole placement methodology. To ensure the observer dynamics converge faster than the controller dynamics, the observer's natural frequency is strictly set to $\omega_n = 10$ rad/s.
 
 ## Simulation Results

@@ -32,19 +32,25 @@ The simulation evaluates the system under a "Closed Loop with Observer" configur
 **Trajectory closed loop with observer n**
 
 <img width="700" height="525" alt="Trajectory closed loop with observer n" src="https://github.com/user-attachments/assets/ddc29d70-1e28-467d-8790-32592b6767f2" />
+
 ---
+
 **State closed loop with observer n**
 
 <img width="1902" height="968" alt="State closed loop with observer n" src="https://github.com/user-attachments/assets/b127f6c2-f8f1-4b1c-8b0d-2ea815f13893" />
+
 ---
 
 **State esimaion error closed loop with observer n**
 
 <img width="1902" height="968" alt="State esimaion error closed loop with observer n" src="https://github.com/user-attachments/assets/5b36ad54-91ae-438d-b93e-4bcd4380bec0" />
+
 ---
+
 **Input closed loop with observer n**
 
 <img width="700" height="525" alt="input closed loop with observer n" src="https://github.com/user-attachments/assets/90bffef6-0270-45d2-b143-8a78e86782ab" />
+
 ---
 
 
